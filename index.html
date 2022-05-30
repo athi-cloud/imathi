@@ -11,6 +11,11 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="main/style.css">
     <link rel="stylesheet" href="main/responsive.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+
 </head>
 
 <body>
@@ -257,13 +262,13 @@
                 </div>
 
             </div>
-            <form id="myForm" action="">
-                <input type="text" id="FullName" placeholder="name" class="box">
-                <input type="email" id="email" placeholder="email" class="box">
-                <input type="text" id="project" placeholder="project" class="box">
-                <textarea name="" id="message" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+            <form  action="">
+                <input type="text" id="FullName" placeholder="name" class="box" required>
+                <input type="email" id="email" placeholder="email" class="box" required>
+                <input type="text" id="project" placeholder="project" class="box" required>
+                <textarea name="" id="message" cols="30" rows="10" class="box message" placeholder="message" required></textarea>
                 <h4 style="color:green;font-size: 19px;" class="sent-notification"></h4>
-                <button type="submit"  class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+                <button id="buttonform" type="submit"  class="btn"> send <i class="fas fa-paper-plane"></i> </button>
             </form>
         </div>
     </section>
@@ -392,6 +397,7 @@
 
 
 
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
 
 
 
@@ -402,6 +408,37 @@
 
     <!-- custom js file link  -->
     <script src="main/script.js"></script>
+
+    <script type="text/javascript">
+        (function(){
+          emailjs.init("5FitwGa1FpAIHKlxg");
+        })();
+        
+        </script>
+    <script>
+var buttonform=document.getElementById('buttonform');
+buttonform.addEventListener('click',function(e){
+    e.preventDefault();
+    var params={
+        fullname:document.getElementById('FullName').value,
+        email:document.getElementById('email').value,
+        project:document.getElementById('project').value,
+        message:document.getElementById('message').value,
+        reply_to:document.getElementById('email').value
+
+    }
+     console.log('clicked')
+     emailjs.send("service_r3peba5", "template_4b2lnln",params).then(function(res){
+         alert('email sent successfully!')
+     });
+})
+       
+             
+  
+  
+    </script>
+
+
 
 
 </body>
