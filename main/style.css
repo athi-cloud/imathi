@@ -2,9 +2,9 @@
 
 :root {
     --yellow: #f9ca24;
-    --primary: #e05cf1;
+    --primary: #5cf183;
     --bg-color: #2E3D4B;
-    --text-color: #f15ccc;
+    --text-color: #5cf183;
 }
 
 * {
@@ -158,11 +158,6 @@ header .navbar ul li {
     display: none;
     transition: 1s;
     color: black;
-    display: flex;
-    justify-content: center;
-    margin-bottom: -4px;
-    margin-top: -8px;
-
 }
 
 .textappearmain {

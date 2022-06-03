@@ -41,6 +41,23 @@
 
 @media only screen and (max-width:991px) {
 
+    .textappearhome,
+    .textappearabout,
+    .textappearedu,
+    .textappearpor,
+    .textappearcon {
+        display: flex;
+        transition: 1s;
+        color: black;
+        justify-content: center;
+        margin-bottom: -4px;
+        margin-top: -8px;
+    }
+
+    .mobilefooter {
+        display: block;
+    }
+
     header {
         display: none;
     }
@@ -100,9 +117,8 @@
 }
 
 @media only screen and (max-width:768px) {
-    .mobilefooter {
-        display: block;
-    }
+
+
 
     html {
         font-size: 50%;
