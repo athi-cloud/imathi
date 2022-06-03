@@ -2,9 +2,9 @@
 
 :root {
     --yellow: #f9ca24;
-    --primary: #5cf183;
+    --primary: #e05cf1;
     --bg-color: #2E3D4B;
-    --text-color: #5cf183;
+    --text-color: #f15ccc;
 }
 
 * {
@@ -155,7 +155,7 @@ header .navbar ul li {
 .textappearedu,
 .textappearpor,
 .textappearcon {
-    /* display: none; */
+    display: none;
     transition: 1s;
     color: black;
     display: flex;
