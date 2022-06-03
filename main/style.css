@@ -155,8 +155,13 @@ header .navbar ul li {
 .textappearedu,
 .textappearpor,
 .textappearcon {
-    display: none;
+    /* display: none; */
     transition: 1s;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -4px;
+    margin-top: -8px;
 
 }
 
